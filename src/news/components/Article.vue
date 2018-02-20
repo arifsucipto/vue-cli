@@ -5,14 +5,18 @@
         <!-- karena parsing nilai ke component, tambah di app author nya -->
        <!-- <app-author :firstName="author.firstName" :lastName="author.lastName"></app-author> -->
        <app-author :author="author"></app-author>
+
         <p class="lead">{{content}}</p>
 
+        <app-social @articleShared="shared('hello fabe', $event)" :article ="$data"></app-social> {{share}}
     </div>    
 </template>
 
 <script>
     import moment from 'moment';
     import Author from './Author.vue'
+    import Social from '../../social/Social.vue'
+
     export default {
         data() {
             return {
@@ -22,8 +26,16 @@
                 author: {
                     firstName: 'arif',
                     lastName : 'Sucipto'
-                    }
+                    },
+                share: 0
             };
+        },
+        methods: {
+            shared: function(message, event){
+                this.share++;
+                console.log(event);
+                console.log(message);
+            }
         },
         filters:{
             moment: function(value){
@@ -31,7 +43,8 @@
             }
         },
         components: {
-            appAuthor: Author
+            appAuthor: Author,
+            appSocial: Social
         }
     }
 </script>
