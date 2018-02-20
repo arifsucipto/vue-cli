@@ -4,7 +4,7 @@
         <p>publish in {{publish | moment}}</p>
         <!-- karena parsing nilai ke component, tambah di app author nya -->
        <!-- <app-author :firstName="author.firstName" :lastName="author.lastName"></app-author> -->
-       <app-author :author="author"></app-author>
+       <app-author :myauthor="author"></app-author>
 
         <p class="lead">{{content}}</p>
 

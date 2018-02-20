@@ -1,5 +1,5 @@
 <template>
-    <small>written by {{author.firstName}} {{author.lastName}}</small> 
+    <small>written by {{myauthor.firstName}} {{myauthor.lastName}}</small> 
   <!-- <small>written by {{firstName}} {{lastName}}</small> -->
 </template>
 
@@ -13,7 +13,7 @@
        // props:['author']
        //KALO MAU VALIDASI PROPS NYA BISA PAKE
        props: {
-           author:{
+           myauthor:{
                type: Object,
                required:true
            }
