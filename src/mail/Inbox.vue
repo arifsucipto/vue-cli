@@ -1,11 +1,19 @@
 <template>
   <div class="inbox-body">
+    <div class="mail-option">
+     <div class="btn-group">
+        <a href="#" class="btn" @click.prevent="refresh">
+          <i class="fa fa-refresh"></i>&nbsp; refresh
+        </a>
+      </div>
+    </div>
+     
     <app-messages :messages="incomingMessages"></app-messages>
   </div>
 </template>
 
 <script>
-
+import { eventBus } from '../main';
 import Messages from './Messages.vue'
 export default {
   props:{
@@ -23,6 +31,11 @@ export default {
   },
   components:{
     appMessages:Messages
+  },
+  methods:{
+    refresh() {
+        eventBus.$emit('refreshMessage');
+    }
   }
 }
 </script>

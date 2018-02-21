@@ -51,7 +51,7 @@ export default {
     computed:{
         currentView() {
             let current = this.history[0];
-            current.data.messages = this.messages;
+            this.$set(current.data,"messages", this.messages);
             return current;
         },
         prevView(){

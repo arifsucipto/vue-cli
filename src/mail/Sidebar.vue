@@ -10,7 +10,7 @@
         </div>
 
         <div class="compose-wrapper">
-           
+           <app-compose></app-compose>
         </div>
 
         <ul class="inbox-nav">
@@ -43,6 +43,7 @@
 
 <script>
  import { eventBus } from "../main.js";
+ import  compose from "./Compose.vue";
 export default {
     props:{
         messages:{
@@ -89,6 +90,9 @@ export default {
                 return message.isDeleted === true;
             });
         },
+    },
+    components: {
+        appCompose : compose
     }
   
 }
