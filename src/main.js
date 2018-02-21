@@ -6,9 +6,11 @@ import Contact from './contact/Contact.vue'
 import Home from './contact/Home.vue'
 import About from './contact/About.vue'
 
+import Mail from './mail/mail.vue'
+
 export const eventBus = new Vue();
 
-
+Vue.component('mail', Mail)
 Vue.component ('announcement', Announcement);
 Vue.component('appArticle', Article);
 Vue.component('contactUs', Contact);

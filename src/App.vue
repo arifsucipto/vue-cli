@@ -14,6 +14,7 @@
   </div> 
   -->
 
+
 <div>
   <nav class="navbar navbar-default navbar-static-top">
      <div class="container">
@@ -29,6 +30,7 @@
            <li><a href="#" @click.prevent="activeView='about-us'">about</a></li>
            <li><a href="#" @click.prevent="activeView='contact-us'"> contact</a></li>
            <li><a href="#" @click.prevent="activeView='app-article'"> article</a></li>
+           <li><a href="#" @click.prevent="activeView='mail'"> Mail</a></li>
          </ul>
     
   <div class="container">
